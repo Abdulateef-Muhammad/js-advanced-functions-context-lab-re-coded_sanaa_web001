@@ -11,8 +11,8 @@ function createEmployeeRecord(info) {
     };
 }
 
-function createEmployeeRecords() {
-    return this.map(
+function createEmployeeRecords(records) {
+    return records.map(
         function(object) {
             return createEmployeeRecord(object);
         }
