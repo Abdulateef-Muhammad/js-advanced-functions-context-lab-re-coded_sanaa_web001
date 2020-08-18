@@ -93,7 +93,7 @@ let src = [
     ["Natalia", "Romanov", "CEO", 150]
 ];
 
-let employees = createEmployeeRecords.call(src, 'Loki');
+let employees = createEmployeeRecords(src);
 console.log(employees);
 
 
