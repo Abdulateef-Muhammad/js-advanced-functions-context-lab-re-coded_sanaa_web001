@@ -98,8 +98,8 @@ console.log(employees);
 
 
 
-function calculatePayroll() {
-    return this.reduce(
+function calculatePayroll(records) {
+    return records.reduce(
         function(sum, record) {
             return sum + allWagesFor(record);
         }, 0
