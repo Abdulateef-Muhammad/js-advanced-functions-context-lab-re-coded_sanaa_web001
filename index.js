@@ -80,8 +80,8 @@ let allWagesFor = function() {
     return payable
 }
 
-function findEmployeeByFirstName(firstName) {
-    return this.find(
+function findEmployeeByFirstName(records, firstName) {
+    return records.find(
         function(record) {
             return record['firstName'] === firstName;
         }
@@ -93,7 +93,7 @@ let src = [
     ["Natalia", "Romanov", "CEO", 150]
 ];
 
-let employees = createEmployeeRecords(src);
+let employees = createEmployeeRecords.call(src);
 console.log(employees);
 
 
