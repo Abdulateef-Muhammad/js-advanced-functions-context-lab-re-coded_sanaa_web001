@@ -101,7 +101,7 @@ console.log(employees);
 function calculatePayroll(records) {
     return records.reduce(
         function(sum, record) {
-            return sum + allWagesFor(record);
+            return sum + allWagesFor.call(record);
         }, 0
     );
 }
