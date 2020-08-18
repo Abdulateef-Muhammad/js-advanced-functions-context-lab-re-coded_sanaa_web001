@@ -1,5 +1,5 @@
 // Your code here
-// Your code here
+
 function createEmployeeRecord(info) {
     return {
         firstName: info[0],
@@ -11,8 +11,8 @@ function createEmployeeRecord(info) {
     };
 }
 
-function createEmployeeRecords(records) {
-    return records.map(
+function createEmployeeRecords() {
+    return this.map(
         function(object) {
             return createEmployeeRecord(object);
         }
@@ -80,19 +80,6 @@ let allWagesFor = function() {
     return payable
 }
 
-// let cRecord = createEmployeeRecord(["Julius", "Caesar", "General", 27]);
-
-// let updatedBpRecord = createTimeInEvent(cRecord, "0044-03-15 0900");
-// updatedBpRecord = createTimeOutEvent(cRecord, "0044-03-15 1100");
-
-// updatedBpRecord = createTimeInEvent(cRecord, "0044-03-14 0900")
-// updatedBpRecord = createTimeOutEvent(cRecord, "0044-03-14 2100")
-
-// console.log(allWagesFor(cRecord));
-
-// let hoursWorked = hoursWorkedOnDate(cRecord, '0044-03-15');
-// console.log(wagesEarnedOnDate(cRecord, '0044-03-15'));
-
 function findEmployeeByFirstName(firstName) {
     return this.find(
         function(record) {
@@ -104,11 +91,10 @@ function findEmployeeByFirstName(firstName) {
 let src = [
     ["Loki", "Laufeysson-Odinsson", "HR Representative", 35],
     ["Natalia", "Romanov", "CEO", 150]
-]
-let emps = createEmployeeRecords(src)
-let loki = findEmployeeByFirstName.call(emps, "Loki");
+];
 
-console.log(loki);
+let employees = createEmployeeRecords.call(src);
+console.log(employees);
 
 
 
