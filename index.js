@@ -115,7 +115,7 @@ console.log(loki);
 function calculatePayroll() {
     return this.reduce(
         function(sum, record) {
-            return sum + allWagesFor.call(record);
+            return sum + allWagesFor(record);
         }, 0
     );
 }
