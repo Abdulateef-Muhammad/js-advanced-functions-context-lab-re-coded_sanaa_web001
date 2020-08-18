@@ -65,7 +65,7 @@ function hoursWorkedOnDate(dateStamp) {
 
 
 function wagesEarnedOnDate(dateStamp) {
-    return this.payPerHour * hoursWorkedOnDate(this, dateStamp);
+    return this.payPerHour * hoursWorkedOnDate.call(this, dateStamp);
 }
 
 let allWagesFor = function() {
